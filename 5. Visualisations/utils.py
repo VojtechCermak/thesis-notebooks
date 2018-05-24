@@ -63,7 +63,6 @@ def load_tweets(path):
     tweets = pd.read_csv(path)
     tweets['lemmas'] = tweets['lemmas'].apply(literal_eval)
     tweets['tokens'] = tweets['tokens'].apply(literal_eval)
-    tweets['stems'] = tweets['stems'].apply(literal_eval)
 
     # Create time variables
     tweets['date'] = tweets['created_at'].str[:10]
